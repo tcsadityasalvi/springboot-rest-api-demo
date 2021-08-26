@@ -1,9 +1,12 @@
-package com.tcs.springbootdemo;
+package com.tcs.springbootdemo.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+
 
 @Entity
 public class User {//not singleton
@@ -18,7 +21,7 @@ public class User {//not singleton
 	public void setId(Integer id) {
 		this.id = id;
 	}
-
+	@NotBlank
 	private String firstName;
 
 	public String getFirstName() {
